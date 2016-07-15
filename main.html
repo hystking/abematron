@@ -21,12 +21,13 @@ body:hover {
 </style><script type="text/template" id="abema-webview-css">[class^="AppContainer__header"],
 [class^="TVContainer__footer"],
 [class^="TVContainer__side"],
-[class^="TVContainer__ad-reserve-button"] {
-  display: none;
+[class^="TVContainer__ad-reserve-button"],
+[class^="TVContainer__loading-icon"] {
+  display: none !important;
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
 }
 </script></head><body><webview class="abema-webview" id="abema-webview" src="https://abema.tv/now-on-air/midnight-anime" autosize="on"></webview><script>const abema_webview = document.getElementById("abema-webview")
 const abema_webview_css = document.getElementById("abema-webview-css")
