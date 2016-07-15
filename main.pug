@@ -1,0 +1,13 @@
+doctype
+html
+  head
+    title Abematron
+    style
+      include main.css
+    script(type="text/template")#abema-webview-css
+      include abema-webview.css
+  body
+    webview#abema-webview.abema-webview(src="https://abema.tv/now-on-air/midnight-anime" autosize="on")
+    script
+      include main.js
+

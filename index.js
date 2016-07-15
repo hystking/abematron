@@ -1,15 +1,25 @@
 const {app, BrowserWindow} = require("electron")
 
+const SCALE = 20
+
 let main_window
 
 app.on("ready", () => {
-  const main_window = new BrowserWindow({width: 400, height: 300})
 
-  main_window.on('closed', () => {
-    win = null
+  main_window = new BrowserWindow({
+    width: 16 * SCALE,
+    height: 9 * SCALE,
+    alwaysOnTop: true,
+    frame: false,
+    resizable: false,
+    transparent: true,
   })
 
-  main_window.loadURL("https://abema.tv/now-on-air/abema-news")
+  main_window.on("closed", () => {
+    main_window = null
+  })
+
+  main_window.loadURL(`file://${__dirname}/main.html`)
 })
 
 

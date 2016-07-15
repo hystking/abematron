@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><title>Abematron</title><style>html,
+body,
+.abema-webview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-app-region: drag;
+  transition: opacity 0.5s;
+}
+
+body:hover {
+  opacity: 0.25;
+}
+</style><script type="text/template" id="abema-webview-css">[class^="AppContainer__header"],
+[class^="TVContainer__footer"],
+[class^="TVContainer__side"],
+[class^="TVContainer__ad-reserve-button"] {
+  display: none;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0);
+}
+</script></head><body><webview class="abema-webview" id="abema-webview" src="https://abema.tv/now-on-air/midnight-anime" autosize="on"></webview><script>const abema_webview = document.getElementById("abema-webview")
+const abema_webview_css = document.getElementById("abema-webview-css")
+
+abema_webview.addEventListener("dom-ready", () => {
+  abema_webview.insertCSS(abema_webview_css.textContent)
+})
+</script></body></html>
