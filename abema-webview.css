@@ -2,9 +2,9 @@
 [class^="TVContainer__footer"],
 [class^="TVContainer__side"],
 [class^="TVContainer__ad-reserve-button"] {
-  display: none;
+  display: none !important;
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
 }
