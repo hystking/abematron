@@ -1,12 +1,11 @@
 {
   "name": "abematron",
   "version": "1.0.0",
-  "description": "",
+  "description": "AbemaTV",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . Abematron --platform darwin --arch x64 --overwrite --icon abematron.icns",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist-mac": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -18,11 +17,13 @@
     "url": "https://github.com/hystking/abematron/issues"
   },
   "homepage": "https://github.com/hystking/abematron#readme",
+  "build": {
+    "appId": "com.electron.hiramekiengine"
+  },
   "devDependencies": {
-    "electron-packager": "^7.3.0"
+    "electron": "^1.7.9",
+    "electron-builder": "^19.40.0"
   },
   "dependencies": {
-    "electron": "^0.4.1",
-    "electron-prebuilt": "^1.2.7"
   }
 }

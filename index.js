@@ -1,6 +1,6 @@
 const {app, BrowserWindow} = require("electron")
 
-const SCALE = 20
+const SCALE = 24
 
 let main_window
 

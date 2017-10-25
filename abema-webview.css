@@ -1,7 +1,6 @@
-[class^="AppContainer__header"],
-[class^="TVContainer__footer"],
-[class^="TVContainer__side"],
-[class^="TVContainer__ad-reserve-button"] {
+header,
+button,
+[aria-hidden] {
   display: none !important;
 }
 
